@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tarzınız Erkek Kuaförü | Beşevler Nilüfer Bursa</title>
+<meta name="description" content="Tarzınız Erkek Kuaförü – Bursa Nilüfer Beşevler'de profesyonel erkek kuaförü. Saç kesimi, sakal tıraşı ve bakım hizmetleri. 4.94 puan ile bölgenin en beğenilen kuaförü.">
+<meta name="keywords" content="Tarzınız Kuaför, Bursa Erkek Kuaförü, Nilüfer Berber, Beşevler Kuaför, Saç Kesimi Bursa, Sakal Tıraşı Nilüfer">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black: #0a0a0a;
+  --dark: #111111;
+  --card: #161616;
+  --border: rgba(255,255,255,0.07);
+  --gold: #c9a96e;
+  --gold-light: #e8c98a;
+  --white: #f5f0eb;
+  --muted: #7a7065;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'DM Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.4rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.4s, border-bottom 0.4s;
+}
+nav.scrolled {
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  color: rgba(245,240,235,0.7);
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-actions { display: flex; align-items: center; gap: 1rem; }
+.nav-social a {
+  color: rgba(245,240,235,0.5);
+  font-size: 1rem;
+  margin-left: 0.8rem;
+  transition: color 0.2s;
+}
+.nav-social a:hover { color: var(--gold); }
+.nav-whatsapp {
+  background: var(--gold);
+  color: var(--black);
+  padding: 0.6rem 1.4rem;
+  border-radius: 2px;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.2s;
+}
+.nav-whatsapp:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: var(--white);
+  transition: all 0.3s;
+}
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,10,0.98);
+  z-index: 99;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--white);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+.mobile-menu a:hover { color: var(--gold); }
+.mobile-close {
+  position: absolute;
+  top: 1.5rem; right: 2rem;
+  font-size: 1.8rem;
+  color: var(--muted);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+@media(max-width:900px) {
+  .nav-links, .nav-social { display: none; }
+  .hamburger { display: flex; }
+  nav { padding: 1.2rem 1.5rem; }
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+}
+.hero-slides { position: relative; width: 100%; height: 100%; }
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.hero-slide.active { opacity: 1; }
+.hero-slide-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  transition: transform 6s ease;
+}
+.hero-slide.active .hero-slide-bg { transform: scale(1); }
+.hero-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10,10,10,0.85) 0%,
+    rgba(10,10,10,0.5) 50%,
+    rgba(10,10,10,0.2) 100%
+  );
+}
+.slide-1 .hero-slide-bg { background-image: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600&q=80'); }
+.slide-2 .hero-slide-bg { background-image: url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1600&q=80'); }
+.slide-3 .hero-slide-bg { background-image: url('https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=1600&q=80'); }
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 3rem;
+  max-width: 700px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.hero-badge::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+.hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.hero-desc {
+  font-size: 1rem;
+  color: rgba(245,240,235,0.7);
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+.hero-features {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.hero-feat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: rgba(245,240,235,0.6);
+  letter-spacing: 0.05em;
+}
+.hero-feat i { color: var(--gold); font-size: 0.75rem; }
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--gold);
+  color: var(--black);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  align-self: flex-start;
+}
+.hero-cta:hover { background: var(--gold-light); transform: translateX(4px); }
+
+/* Slider controls */
+.hero-nav {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 3rem;
+  z-index: 3;
+  display: flex;
+  gap: 0.5rem;
+}
+.hero-dot {
+  width: 28px;
+  height: 2px;
+  background: rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: background 0.3s, width 0.3s;
+  border: none;
+}
+.hero-dot.active {
+  background: var(--gold);
+  width: 48px;
+}
+.hero-arrows {
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
+  z-index: 3;
+  display: flex;
+  gap: 0.5rem;
+}
+.hero-arrow {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.3);
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  backdrop-filter: blur(4px);
+}
+.hero-arrow:hover { border-color: var(--gold); color: var(--gold); }
+
+@media(max-width:768px) {
+  .hero-content { padding: 0 1.5rem; }
+  .hero-features { flex-direction: column; gap: 0.8rem; }
+  .hero-nav { left: 1.5rem; }
+  .hero-arrows { right: 1.5rem; }
+}
+
+/* ── RANDEVU ── */
+#randevu {
+  background: var(--dark);
+  padding: 6rem 3rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.randevu-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+.section-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  max-width: 60px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.4;
+}
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+.section-sub {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 3rem;
+}
+.randevu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+@media(max-width:700px) {
+  .randevu-grid { grid-template-columns: 1fr; gap: 2rem; }
+  #randevu { padding: 4rem 1.5rem; }
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media(max-width:500px) { .form-row { grid-template-columns: 1fr; } }
+.form-group { margin-bottom: 1rem; }
+.form-group label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+.form-group input, .form-group select {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: 0.85rem 1rem;
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+}
+.form-group input::placeholder { color: rgba(255,255,255,0.2); }
+.form-group input:focus, .form-group select:focus { border-color: var(--gold); }
+.form-group select option { background: #1a1a1a; }
+.submit-btn {
+  width: 100%;
+  background: var(--gold);
+  color: var(--black);
+  border: none;
+  padding: 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+.submit-btn:hover { background: var(--gold-light); }
+.submit-btn:active { transform: scale(0.99); }
+.randevu-info { padding-top: 0.5rem; }
+.info-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.info-item:first-child { border-top: 1px solid var(--border); }
+.info-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(201,169,110,0.1);
+  border: 1px solid rgba(201,169,110,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.info-text strong {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+.info-text span {
+  font-size: 0.92rem;
+  color: var(--white);
+}
+.info-text a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.info-text a:hover { color: var(--gold); }
+
+/* ── SALON ── */
+#salon {
+  padding: 6rem 3rem;
+}
+.salon-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+@media(max-width:900px) {
+  .salon-grid { grid-template-columns: 1fr; gap: 3rem; }
+  #salon { padding: 4rem 1.5rem; }
+}
+.salon-text .section-label, .salon-text .section-title { margin-bottom: 1rem; }
+.salon-desc {
+  color: rgba(245,240,235,0.65);
+  font-size: 0.95rem;
+  line-height: 1.9;
+  margin-bottom: 2rem;
+}
+.salon-features { list-style: none; }
+.salon-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  color: rgba(245,240,235,0.75);
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+.salon-features li i { color: var(--gold); font-size: 0.7rem; }
+.salon-visual {
+  position: relative;
+}
+.salon-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+.salon-img-wrap img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+  transition: filter 0.4s, transform 0.6s;
+}
+.salon-img-wrap:hover img { filter: grayscale(0%); transform: scale(1.03); }
+.salon-badge {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  width: 110px;
+  height: 110px;
+  background: var(--gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+}
+.salon-badge .num {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.salon-badge .label { font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ── GALERİ ── */
+#galeri {
+  padding: 6rem 3rem;
+  background: var(--dark);
+  border-top: 1px solid var(--border);
+}
+.galeri-header {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+.galeri-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 0.5rem;
+}
+.galeri-item {
+  overflow: hidden;
+  position: relative;
+}
+.galeri-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.galeri-item img {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(30%);
+  transition: filter 0.4s, transform 0.5s;
+}
+.galeri-item:hover img { filter: grayscale(0%); transform: scale(1.05); }
+.galeri-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.galeri-item:hover::after { opacity: 1; }
+@media(max-width:900px) {
+  .galeri-grid { grid-template-columns: repeat(2, 1fr); }
+  .galeri-item:nth-child(1) { grid-column: span 2; }
+  #galeri { padding: 4rem 1.5rem; }
+}
+
+/* ── HİZMETLER ── */
+#hizmetler {
+  padding: 6rem 3rem;
+}
+.hizmetler-inner { max-width: 1200px; margin: 0 auto; }
+.hizmetler-header { margin-bottom: 3rem; }
+.hizmetler-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media(max-width:900px) { .hizmetler-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width:600px) { .hizmetler-grid { grid-template-columns: 1fr; } #hizmetler { padding: 4rem 1.5rem; } }
+.hizmet-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+  position: relative;
+}
+.hizmet-card:hover {
+  border-color: rgba(201,169,110,0.3);
+  transform: translateY(-4px);
+}
+.hizmet-img {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+.hizmet-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+  filter: grayscale(20%);
+}
+.hizmet-card:hover .hizmet-img img { transform: scale(1.07); filter: grayscale(0%); }
+.hizmet-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(22,22,22,0.9) 0%, transparent 60%);
+}
+.hizmet-info {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hizmet-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--white);
+}
+.hizmet-price {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* ── EKİP ── */
+#ekip {
+  padding: 6rem 3rem;
+  background: var(--dark);
+  border-top: 1px solid var(--border);
+}
+.ekip-inner { max-width: 900px; margin: 0 auto; }
+.ekip-header { margin-bottom: 3rem; }
+.ekip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media(max-width:600px) {
+  .ekip-grid { grid-template-columns: 1fr; }
+  #ekip { padding: 4rem 1.5rem; }
+}
+.ekip-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+.ekip-card:hover { border-color: rgba(201,169,110,0.3); }
+.ekip-img {
+  height: 340px;
+  overflow: hidden;
+}
+.ekip-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%);
+  transition: filter 0.4s, transform 0.5s;
+}
+.ekip-card:hover .ekip-img img { filter: grayscale(0%); transform: scale(1.03); }
+.ekip-info {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ekip-name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.ekip-role { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+.ekip-ig {
+  color: var(--muted);
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.ekip-ig:hover { color: var(--gold); }
+
+/* ── YORUMLAR ── */
+#yorumlar {
+  padding: 6rem 3rem;
+}
+.yorumlar-inner { max-width: 1100px; margin: 0 auto; }
+.yorumlar-header { margin-bottom: 3rem; }
+.yorumlar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media(max-width:900px) { .yorumlar-grid { grid-template-columns: 1fr 1fr; } }
+@media(max-width:600px) { .yorumlar-grid { grid-template-columns: 1fr; } #yorumlar { padding: 4rem 1.5rem; } }
+.yorum-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  transition: border-color 0.3s;
+}
+.yorum-card:hover { border-color: rgba(201,169,110,0.2); }
+.yorum-stars { color: var(--gold); font-size: 0.8rem; letter-spacing: 0.1em; margin-bottom: 1rem; }
+.yorum-text {
+  color: rgba(245,240,235,0.7);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.yorum-author { display: flex; align-items: center; gap: 0.75rem; }
+.yorum-avatar {
+  width: 36px;
+  height: 36px;
+  background: rgba(201,169,110,0.15);
+  border: 1px solid rgba(201,169,110,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--gold);
+}
+.yorum-name { font-size: 0.88rem; font-weight: 500; }
+.yorum-date { font-size: 0.75rem; color: var(--muted); }
+
+/* ── İLETİŞİM ── */
+#iletisim {
+  padding: 6rem 3rem;
+  background: var(--dark);
+  border-top: 1px solid var(--border);
+}
+.iletisim-inner { max-width: 1100px; margin: 0 auto; }
+.iletisim-header { margin-bottom: 3rem; }
+.iletisim-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+}
+@media(max-width:900px) {
+  .iletisim-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  #iletisim { padding: 4rem 1.5rem; }
+}
+.iletisim-info-item {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.iletisim-info-item:first-child { border-top: 1px solid var(--border); }
+.iletisim-info-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+.iletisim-info-value {
+  font-size: 0.95rem;
+  color: var(--white);
+}
+.iletisim-info-value a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.iletisim-info-value a:hover { color: var(--gold); }
+.calisma-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.calisma-gun {
+  font-size: 0.85rem;
+  color: rgba(245,240,235,0.7);
+  padding: 0.3rem 0;
+}
+.calisma-saat { font-size: 0.85rem; color: var(--gold); }
+.map-wrap {
+  border: 1px solid var(--border);
+  overflow: hidden;
+  height: 100%;
+  min-height: 350px;
+}
+.map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  border: none;
+  filter: grayscale(80%) invert(10%);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #070707;
+  border-top: 1px solid var(--border);
+  padding: 3rem;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footer-logo {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: none;
+}
+.footer-tagline {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+.footer-links { display: flex; gap: 0.75rem; }
+.footer-link {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.footer-link:hover { border-color: var(--gold); color: var(--gold); }
+.footer-copy { font-size: 0.78rem; color: var(--muted); }
+@media(max-width:600px) { footer { padding: 2rem 1.5rem; } }
+
+/* ── WHATSAPP FIXED ── */
+.wa-fixed {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 90;
+  width: 54px;
+  height: 54px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.wa-fixed:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+
+/* ── TOAST ── */
+.toast {
+  position: fixed;
+  bottom: 6rem;
+  right: 2rem;
+  z-index: 200;
+  background: var(--gold);
+  color: var(--black);
+  padding: 0.9rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s;
+  pointer-events: none;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* ── ANIMATIONS ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s, transform 0.7s;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">TARZINIZ</a>
+  <ul class="nav-links">
+    <li><a href="#salon">Salonumuz</a></li>
+    <li><a href="#galeri">Çalışmalarımız</a></li>
+    <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+    <li><a href="#ekip">Ekibimiz</a></li>
+    <li><a href="#iletisim">İletişim</a></li>
+  </ul>
+  <div class="nav-actions">
+    <div class="nav-social">
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/905321704515" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <a href="#randevu" class="nav-whatsapp">Randevu Al</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBİL MENÜ -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()"><i class="fas fa-times"></i></button>
+  <a href="#salon" onclick="toggleMenu()">Salonumuz</a>
+  <a href="#galeri" onclick="toggleMenu()">Çalışmalarımız</a>
+  <a href="#hizmetler" onclick="toggleMenu()">Hizmetlerimiz</a>
+  <a href="#ekip" onclick="toggleMenu()">Ekibimiz</a>
+  <a href="#randevu" onclick="toggleMenu()">Randevu Al</a>
+  <a href="#iletisim" onclick="toggleMenu()">İletişim</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-slides">
+    <div class="hero-slide slide-1 active">
+      <div class="hero-slide-bg"></div>
+    </div>
+    <div class="hero-slide slide-2">
+      <div class="hero-slide-bg"></div>
+    </div>
+    <div class="hero-slide slide-3">
+      <div class="hero-slide-bg"></div>
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">Bursa Nilüfer · Beşevler</div>
+    <h1>Tarzınızı<br><em>Yeniden</em><br>Keşfedin</h1>
+    <p class="hero-desc">Deneyimli ekibimiz ve modern tekniklerimizle saç, sakal ve bakım hizmetlerinde mükemmeliyeti sunuyoruz. 4.94 puan ile bölgenin en beğenilen kuaförü.</p>
+    <div class="hero-features">
+      <span class="hero-feat"><i class="fas fa-star"></i> 4.94 Google Puanı</span>
+      <span class="hero-feat"><i class="fas fa-users"></i> 100+ Mutlu Müşteri</span>
+      <span class="hero-feat"><i class="fas fa-clock"></i> Hızlı Randevu</span>
+    </div>
+    <a href="#randevu" class="hero-cta"><i class="fab fa-whatsapp"></i> WhatsApp ile Randevu</a>
+  </div>
+  <div class="hero-nav">
+    <button class="hero-dot active" onclick="goToSlide(0)"></button>
+    <button class="hero-dot" onclick="goToSlide(1)"></button>
+    <button class="hero-dot" onclick="goToSlide(2)"></button>
+  </div>
+  <div class="hero-arrows">
+    <button class="hero-arrow" onclick="prevSlide()"><i class="fas fa-arrow-left"></i></button>
+    <button class="hero-arrow" onclick="nextSlide()"><i class="fas fa-arrow-right"></i></button>
+  </div>
+</section>
+
+<!-- RANDEVU -->
+<section id="randevu">
+  <div class="randevu-inner">
+    <div class="randevu-grid">
+      <div>
+        <div class="section-label">Randevu</div>
+        <h2 class="section-title">WhatsApp ile<br>Randevu Alın</h2>
+        <p class="section-sub">Bilgilerinizi girin, hemen WhatsApp'tan onaylayalım.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ad Soyad</label>
+            <input type="text" id="r_ad" placeholder="Adınız">
+          </div>
+          <div class="form-group">
+            <label>Telefon</label>
+            <input type="tel" id="r_tel" placeholder="05XX XXX XX XX">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Tarih</label>
+            <input type="date" id="r_tarih">
+          </div>
+          <div class="form-group">
+            <label>Saat</label>
+            <input type="time" id="r_saat" min="09:30" max="21:00">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Hizmet</label>
+          <select id="r_hizmet">
+            <option value="">Seçiniz</option>
+            <option>Saç Kesimi</option>
+            <option>Sakal Tıraşı</option>
+            <option>Saç + Sakal</option>
+            <option>Yıkama & Fön</option>
+            <option>Cilt Bakımı</option>
+            <option>Çocuk Kesimi</option>
+          </select>
+        </div>
+        <button class="submit-btn" onclick="randevuGonder()">
+          <i class="fab fa-whatsapp"></i> Randevu Oluştur
+        </button>
+      </div>
+      <div class="randevu-info">
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="info-text">
+            <strong>Adres</strong>
+            <span>Beşevler, Bilginler Cad. No:132, 16110 Nilüfer/Bursa</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-phone"></i></div>
+          <div class="info-text">
+            <strong>Telefon</strong>
+            <span><a href="tel:+905321704515">+90 532 170 45 15</a></span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-clock"></i></div>
+          <div class="info-text">
+            <strong>Çalışma Saatleri</strong>
+            <span>Pazartesi – Cumartesi: 09:30 – 21:00<br><span style="color:var(--muted)">Pazar: Kapalı</span></span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><i class="fas fa-star"></i></div>
+          <div class="info-text">
+            <strong>Google Puanı</strong>
+            <span style="color:var(--gold)">★★★★★ 4.94 / 5 — 100+ Yorum</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SALON -->
+<section id="salon">
+  <div class="salon-grid reveal">
+    <div class="salon-text">
+      <div class="section-label">Salonumuz</div>
+      <h2 class="section-title">Konforlu ve Modern<br>Bir Deneyim</h2>
+      <p class="salon-desc">Tarzınız Kuaförü olarak Bursa Nilüfer Beşevler'de modern ve şık salonumuzda sizleri ağırlamaktan mutluluk duyuyoruz. Uzman ekibimiz ve kaliteli ürünlerimizle her ziyareti özel bir deneyime dönüştürüyoruz.</p>
+      <ul class="salon-features">
+        <li><i class="fas fa-check"></i> Profesyonel ve deneyimli ekip</li>
+        <li><i class="fas fa-check"></i> Modern salon ekipmanları</li>
+        <li><i class="fas fa-check"></i> Hijyenik ve steril ortam</li>
+        <li><i class="fas fa-check"></i> Kişiye özel bakım yaklaşımı</li>
+        <li><i class="fas fa-check"></i> Çay, kahve ve ikramlar</li>
+        <li><i class="fas fa-check"></i> Çocuklara özel ilgi</li>
+      </ul>
+    </div>
+    <div class="salon-visual">
+      <div class="salon-img-wrap">
+        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&q=80" alt="Tarzınız Kuaför Salon">
+      </div>
+      <div class="salon-badge">
+        <span class="num">4.94</span>
+        <span class="label">Google Puan</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERİ -->
+<section id="galeri">
+  <div class="galeri-header reveal">
+    <div class="section-label">Çalışmalarımız</div>
+    <h2 class="section-title">İşlerimize Göz Atın</h2>
+  </div>
+  <div class="galeri-grid">
+    <div class="galeri-item"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80" alt="Saç Kesimi"></div>
+    <div class="galeri-item"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80" alt="Sakal"></div>
+    <div class="galeri-item"><img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80" alt="Tıraş"></div>
+    <div class="galeri-item"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80" alt="Bakım"></div>
+    <div class="galeri-item"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80" alt="Stil"></div>
+  </div>
+</section>
+
+<!-- HİZMETLER -->
+<section id="hizmetler">
+  <div class="hizmetler-inner">
+    <div class="hizmetler-header reveal">
+      <div class="section-label">Hizmetlerimiz</div>
+      <h2 class="section-title">Kaliteli ve Özenli Hizmetler</h2>
+    </div>
+    <div class="hizmetler-grid">
+      <div class="hizmet-card reveal">
+        <div class="hizmet-img">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80" alt="Saç Kesimi">
+        </div>
+        <div class="hizmet-info">
+          <div>
+            <div class="hizmet-name">Saç Kesimi</div>
+          </div>
+          <div class="hizmet-price">200₺</div>
+        </div>
+      </div>
+      <div class="hizmet-card reveal">
+        <div class="hizmet-img">
+          <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80" alt="Sakal Tıraşı">
+        </div>
+        <div class="hizmet-info">
+          <div>
+            <div class="hizmet-name">Sakal Tıraşı</div>
+          </div>
+          <div class="hizmet-price">150₺</div>
+        </div>
+      </div>
+      <div class="hizmet-card reveal">
+        <div class="hizmet-img">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80" alt="Saç + Sakal">
+        </div>
+        <div class="hizmet-info">
+          <div>
+            <div class="hizmet-name">Saç + Sakal Kesimi</div>
+          </div>
+          <div class="hizmet-price">320₺</div>
+        </div>
+      </div>
+      <div class="hizmet-card reveal">
+        <div class="hizmet-img">
+          <img src="https://images.unsplash.com/photo-1634302086687-ef4db20dbdc6?w=600&q=80" alt="Yıkama Fön">
+        </div>
+        <div class="hizmet-info">
+          <div>
+            <div class="hizmet-name">Yıkama & Fön</div>
+          </div>
+          <div class="hizmet-price">100₺</div>
+        </div>
+      </div>
+      <div class="hizmet-card reveal">
+        <div class="hizmet-img">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80" alt="Cilt Bakımı">
+        </div>
+        <div class="hizmet-info">
+          <div>
+            <div class="hizmet-name">Cilt Bakımı</div>
+          </div>
+          <div class="hizmet-price">250₺</div>
+        </div>
+      </div>
+      <div class="hizmet-card reveal">
+        <div class="hizmet-img">
+          <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80" alt="Çocuk Kesimi">
+        </div>
+        <div class="hizmet-info">
+          <div>
+            <div class="hizmet-name">Çocuk Kesimi</div>
+          </div>
+          <div class="hizmet-price">150₺</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EKİP -->
+<section id="ekip">
+  <div class="ekip-inner">
+    <div class="ekip-header reveal">
+      <div class="section-label">Ekibimiz</div>
+      <h2 class="section-title">Uzman Kadromuzla<br>Tanışın</h2>
+    </div>
+    <div class="ekip-grid">
+      <div class="ekip-card reveal">
+        <div class="ekip-img">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Mert">
+        </div>
+        <div class="ekip-info">
+          <div>
+            <div class="ekip-name">Mert Bey</div>
+            <div class="ekip-role">Baş Kuaför</div>
+          </div>
+          <a href="#" class="ekip-ig"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="ekip-card reveal">
+        <div class="ekip-img">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80" alt="Eren">
+        </div>
+        <div class="ekip-info">
+          <div>
+            <div class="ekip-name">Eren Bey</div>
+            <div class="ekip-role">Kuaför</div>
+          </div>
+          <a href="#" class="ekip-ig"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YORUMLAR -->
+<section id="yorumlar">
+  <div class="yorumlar-inner">
+    <div class="yorumlar-header reveal">
+      <div class="section-label">Müşteri Yorumları</div>
+      <h2 class="section-title">Onlar Ne Dedi?</h2>
+    </div>
+    <div class="yorumlar-grid">
+      <div class="yorum-card reveal">
+        <div class="yorum-stars">★★★★★</div>
+        <p class="yorum-text">"Herşey mükemmel. Eren bey e teşekkür ederiz. Bursa da bulabileceğiniz en nadir kuafördür kendileri. Titizlikle işlerini yapıyorlar."</p>
+        <div class="yorum-author">
+          <div class="yorum-avatar">A</div>
+          <div>
+            <div class="yorum-name">Ahmet Y.</div>
+            <div class="yorum-date">Google Yorumu</div>
+          </div>
+        </div>
+      </div>
+      <div class="yorum-card reveal">
+        <div class="yorum-stars">★★★★★</div>
+        <p class="yorum-text">"Saç konusunda kimse benim kadar takıntılı olmasın, Bursa'da gitmediğim kuaför kalmadı. Mert bey ve ekip arkadaşları bu işin piri."</p>
+        <div class="yorum-author">
+          <div class="yorum-avatar">M</div>
+          <div>
+            <div class="yorum-name">Mehmet K.</div>
+            <div class="yorum-date">Google Yorumu</div>
+          </div>
+        </div>
+      </div>
+      <div class="yorum-card reveal">
+        <div class="yorum-stars">★★★★★</div>
+        <p class="yorum-text">"İnanılmaz ilgili ve güler yüzlüler. İşlerini çok titiz ve profesyonelce yapıyorlar. Fiyat olarak da çok uygunlar. Kesinlikle tavsiye ederim."</p>
+        <div class="yorum-author">
+          <div class="yorum-avatar">E</div>
+          <div>
+            <div class="yorum-name">Emre S.</div>
+            <div class="yorum-date">Google Yorumu</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- İLETİŞİM -->
+<section id="iletisim">
+  <div class="iletisim-inner">
+    <div class="iletisim-header reveal">
+      <div class="section-label">İletişim</div>
+      <h2 class="section-title">Bize Ulaşın</h2>
+    </div>
+    <div class="iletisim-grid">
+      <div>
+        <div class="iletisim-info-item">
+          <div class="iletisim-info-label">Adres</div>
+          <div class="iletisim-info-value">Beşevler, Bilginler Cad. No:132,<br>16110 Nilüfer/Bursa</div>
+        </div>
+        <div class="iletisim-info-item">
+          <div class="iletisim-info-label">Telefon</div>
+          <div class="iletisim-info-value">
+            <a href="tel:+905321704515">+90 532 170 45 15</a>
+          </div>
+        </div>
+        <div class="iletisim-info-item">
+          <div class="iletisim-info-label">Çalışma Saatleri</div>
+          <div class="iletisim-info-value">
+            <div class="calisma-grid">
+              <span class="calisma-gun">Pazartesi – Cumartesi</span>
+              <span class="calisma-saat">09:30 – 21:00</span>
+              <span class="calisma-gun">Pazar</span>
+              <span class="calisma-saat" style="color:var(--muted)">Kapalı</span>
+            </div>
+          </div>
+        </div>
+        <div class="iletisim-info-item">
+          <div class="iletisim-info-label">Sosyal Medya</div>
+          <div class="iletisim-info-value">
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram'da takip edin</a>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.8!2d28.9620!3d40.2180!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDEzJzA0LjgiTiAyOMKwNTcnNDMuMiJF!5e0!3m2!1str!2str!4v1620000000000!5m2!1str!2str"
+          allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="#" class="footer-logo">TARZINIZ</a>
+      <div class="footer-tagline">Erkek Kuaförü · Nilüfer, Bursa</div>
+    </div>
+    <div class="footer-links">
+      <a href="#" class="footer-link" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/905321704515" class="footer-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="tel:+905321704515" class="footer-link"><i class="fas fa-phone"></i></a>
+    </div>
+    <div class="footer-copy">© 2026 Tarzınız Erkek Kuaförü. Tüm hakları saklıdır.</div>
+  </div>
+</footer>
+
+<!-- WHATSAPP SABİT -->
+<a href="https://wa.me/905321704515" class="wa-fixed" target="_blank" title="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ── NAVBAR SCROLL ──
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ── MOBİL MENÜ ──
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// ── HERO SLİDER ──
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.hero-dot');
+
+function goToSlide(n) {
+  slides[currentSlide].classList.remove('active');
+  dots[currentSlide].classList.remove('active');
+  currentSlide = (n + slides.length) % slides.length;
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
+}
+function nextSlide() { goToSlide(currentSlide + 1); }
+function prevSlide() { goToSlide(currentSlide - 1); }
+setInterval(nextSlide, 5000);
+
+// ── RANDEVU ──
+function randevuGonder() {
+  const ad = document.getElementById('r_ad').value.trim();
+  const tel = document.getElementById('r_tel').value.trim();
+  const tarih = document.getElementById('r_tarih').value;
+  const saat = document.getElementById('r_saat').value;
+  const hizmet = document.getElementById('r_hizmet').value;
+
+  if (!ad || !tarih || !hizmet) {
+    showToast('Lütfen ad, tarih ve hizmet seçiniz.');
+    return;
+  }
+
+  const msg = `Merhaba! Randevu talebi:\n\nAd: ${ad}\nTelefon: ${tel}\nTarih: ${tarih}\nSaat: ${saat}\nHizmet: ${hizmet}`;
+  const url = `https://wa.me/905321704515?text=${encodeURIComponent(msg)}`;
+  window.open(url, '_blank');
+  showToast('WhatsApp açılıyor...');
+}
+
+// ── TOAST ──
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// ── REVEAL ANİMASYON ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
